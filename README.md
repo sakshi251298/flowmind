@@ -1,0 +1,122 @@
+# FlowMind
+
+<p align="center">
+  <img src="apps/web/public/favicon.svg" alt="Devbox Logo" width="90" height="90">
+</p>
+
+<p align="center"><strong>Ask, Learn, Master.</strong></p>
+<p align="center">https://flowmind.sakshipatel.dev</p>
+<p align="center">Your personal AI learning ecosystem. An open-source, multi-agent platform that autonomously crafts highly personalized learning content to help you master any subject.</p>
+
+<p align="center">
+  <img src="./apps/landing/public/product_assets/platform_demo.gif" width="800px" alt="Platform_demo">
+</p>
+
+
+## 🎯 What is FlowMind?
+
+FlowMind is a comprehensive AI-powered learning environment designed to transform how you study and explore new topics. By leveraging multi-agent orchestration, the platform builds an adaptive curriculum specifically for you.
+
+### How it Works
+
+- **Ask anything** — Start a learning session on any topic from scratch, or provide your own study materials (PDFs, URLs) for the agents to analyze.
+- **Learn interactively** — Engage with a dedicated tutor agent that guides you step-by-step. The chat experience is enhanced with inline visualizations, dynamic diagrams, and interactive widgets.
+- **Master the material** — Unlike standard chatbot interfaces, FlowMind automatically generates a complete asset pack to help you master the material:
+  - Deep-dive explanations
+  - Interactive concept roadmaps
+  - Presentation slides
+  - Podcast scripts
+  - Spaced-repetition flashcards
+
+### 📦 Generated Learning Content
+
+FlowMind acts as your personal curriculum factory. Once it understands what you are trying to learn, our multi-agent workflow autonomously researches and synthesizes a complete, structured study-pack:
+- **Deep-Dive Explanations**: Long-form, beautifully formatted reading materials.
+- **Roadmaps**: Interactive diagrams showing how topics interconnect.
+- **Audio Podcasts**: Generated dialog-style podcasts exploring the subject matter.
+- **Slide Decks**: Ready-to-read presentations summarizing key takeaways.
+- **Flashcard Sets**: Spaced-repetition cards designed for active recall.
+
+### 🎨 Interactive "Artifact" Chat
+
+Drawing inspiration from systems like Claude's Artifacts, your FlowMind Tutor doesn't just reply with simple text. During a session, the tutoring agent will actively generate and render living UI components directly in your chat stream. When explaining complex ideas, the agent can auto-generate:
+- Custom SVG illustrations
+- Dynamic data visualizations and charts
+- Mermaid-based architectural diagrams and flowcharts
+- Interactive learning widgets
+
+## 🚀 Quick Start
+
+Get FlowMind up and running locally with just a few commands. This builds and launches the full platform (UI, APIs, and Database) via Docker.
+
+### Prerequisites
+Make sure you have installed on your machine:
+- Node.js ≥ 18 & pnpm ≥ 10
+- Python ≥ 3.11
+- Go ≥ 1.21
+- Docker Desktop (or another Docker engine)
+
+### Setup & Launch
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sakshi251298/flowmind
+   cd flowmind
+   ```
+
+2. **Start the platform**
+   One command installs dependencies, launches all services via Docker Compose, and runs migrations:
+   ```bash
+   make start
+   ```
+
+The application is now running locally!
+- **Web UI**: [http://localhost:5173](http://localhost:5173) (Open this in your browser)
+- Agent API: http://localhost:5001
+- User/GraphQL API: http://localhost:8080
+
+> **Local development with hot reload?** Use `make setup-local` instead, then `make dev` to run services with live reloading.
+
+---
+
+## 🛠 Tech Stack
+
+A polyglot, multi-service architecture built for modularity and performance. Each layer is independently deployable and uses best-in-class tooling for its domain.
+
+| Layer | Technology |
+|---|---|
+| **Frontend** | TypeScript, React 19, Vite, Tailwind CSS v4, shadcn/ui |
+| **State & Routing** | TanStack Router, TanStack Query |
+| **User Service** | Go 1.21+, Echo, GraphQL (gqlgen), sqlc |
+| **Agent Service** | Python 3.11+, Flask, LangGraph, LangChain |
+| **Web Server** | Nginx |
+| **Database** | PostgreSQL |
+| **Containerization**| Docker, Docker Compose |
+| **Monorepo** | Turborepo, pnpm workspaces |
+
+## ☁️ Deployment Stack
+
+Production-grade infrastructure on AWS with fully automated CI/CD. Zero static credentials — GitHub Actions authenticates via OIDC federation.
+
+| Component | Technology |
+|---|---|
+| **Containerization**| Amazon ECR |
+| **Orchestration** | Amazon EKS (Kubernetes) |
+| **Ingress / TLS** | AWS ALB + ACM Certificate |
+| **Secrets** | AWS Secrets Manager → External Secrets Operator |
+| **Database** | Amazon RDS (PostgreSQL) |
+| **CI/CD** | GitHub Actions |
+| **Landing Page** | GitHub Pages (React build) |
+| **Documentation** | Docsify (via GitHub Pages) |
+
+---
+
+## 📚 Documentation
+
+For developers, contributors, and those looking to run services outside of Docker, please refer to our dedicated documentation guides:
+
+- **[Getting Started / Local Dev](docs/getting-started.md)** — Detailed setup instructions, hot-reloading configurations, and troubleshooting tips.
+- **[Agentic Harness](docs/agent-harness.md)** — Deep dive into the Python multi-agent system, including the Supervisor/Worker architecture, UI tools, and state persistence.
+- **[Architecture Overview](docs/architecture.md)** — Deep dive into the monorepo structure, multi-agent LangGraph flows, and tech stack details.
+- **[AWS Deployment](docs/aws-deployment.md)** — Deploy to Amazon EKS with CI/CD via GitHub Actions, ECR, Secrets Manager, and ALB ingress.
+- **[Contributing](docs/contributing.md)** — Pull request guidelines, code of conduct, and development standards.
