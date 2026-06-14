@@ -58,7 +58,7 @@ const features: Feature[] = [
     description:
       'Start with a question, upload a PDF or URL as source material, and learn in a guided conversation that stays practical instead of generic.',
     icon: MessageSquareMore,
-    accent: 'from-[oklch(0.68_0.13_38)] to-[oklch(0.9_0.04_70)]',
+    accent: 'from-[oklch(0.65_0.18_194)] to-[oklch(0.82_0.09_210)]',
   },
   {
     id: 'artifacts',
@@ -67,7 +67,7 @@ const features: Feature[] = [
     description:
       'FlowMind can render diagrams, widgets, and visual explainers inside the lesson so complex ideas become easier to inspect and remember.',
     icon: Sparkles,
-    accent: 'from-[oklch(0.62_0.1_215)] to-[oklch(0.92_0.03_235)]',
+    accent: 'from-[oklch(0.58_0.22_285)] to-[oklch(0.78_0.12_300)]',
   },
   {
     id: 'roadmaps',
@@ -76,7 +76,7 @@ const features: Feature[] = [
     description:
       'Roadmaps make the learning path visible, helping you understand dependencies, sequence the topic, and know what to study next.',
     icon: Compass,
-    accent: 'from-[oklch(0.58_0.11_155)] to-[oklch(0.9_0.03_175)]',
+    accent: 'from-[oklch(0.62_0.18_155)] to-[oklch(0.82_0.08_170)]',
   },
   {
     id: 'modes',
@@ -85,7 +85,7 @@ const features: Feature[] = [
     description:
       'Deep dives, flashcards, podcasts, slides, and roadmaps all come out of the same session, giving you multiple ways to revisit and retain the material.',
     icon: Layers3,
-    accent: 'from-[oklch(0.66_0.14_18)] to-[oklch(0.92_0.03_55)]',
+    accent: 'from-[oklch(0.62_0.16_230)] to-[oklch(0.82_0.08_245)]',
   },
 ];
 
@@ -374,15 +374,15 @@ function App() {
                 {/* Overlapping Middle Shell (Artifacts Bento) - Behind Video */}
                 <div className="absolute -right-24 lg:-right-30 -top-18 w-[18rem] sm:w-[22rem] rounded-[2rem] border border-border/50 bg-background/80 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.1)] backdrop-blur-xl transition-all duration-700 group-hover:-translate-y-4 group-hover:translate-x-4 z-99 hidden lg:block opacity-90 scale-85">
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-100 p-4 border border-emerald-100 dark:from-emerald-950 dark:to-teal-900 dark:border-emerald-800">
-                      <Compass className="mb-2 h-6 w-6 text-emerald-600 dark:text-emerald-400" />
-                      <p className="text-sm font-bold text-emerald-900 dark:text-emerald-100">Roadmap</p>
-                      <p className="text-xs text-emerald-700/80 dark:text-emerald-300/80">Explore concepts and connections</p>
+                    <div className="rounded-2xl bg-gradient-to-br from-teal-900/70 to-cyan-800/50 p-4 border border-teal-600/25">
+                      <Compass className="mb-2 h-6 w-6 text-teal-400" />
+                      <p className="text-sm font-bold text-teal-100">Roadmap</p>
+                      <p className="text-xs text-teal-300/80">Explore concepts and connections</p>
                     </div>
-                    <div className="rounded-2xl bg-gradient-to-br from-orange-50 to-rose-100 p-4 border border-rose-100 dark:from-orange-950 dark:to-rose-900 dark:border-rose-800">
-                      <AudioLines className="mb-2 h-6 w-6 text-rose-600 dark:text-rose-400" />
-                      <p className="text-sm font-bold text-rose-900 dark:text-rose-100">Podcast</p>
-                      <p className="text-xs text-rose-700/80 dark:text-rose-300/80">12 min recap</p>
+                    <div className="rounded-2xl bg-gradient-to-br from-violet-900/70 to-purple-800/50 p-4 border border-violet-600/25">
+                      <AudioLines className="mb-2 h-6 w-6 text-violet-400" />
+                      <p className="text-sm font-bold text-violet-100">Podcast</p>
+                      <p className="text-xs text-violet-300/80">12 min recap</p>
                     </div>
                   </div>
                 </div>

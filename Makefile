@@ -1,5 +1,8 @@
 #!make
 
+SHELL := /bin/bash
+MAKE  := "$(MAKE)"
+
 # Colors for output
 BLUE := \033[0;34m
 GREEN := \033[0;32m
@@ -104,7 +107,7 @@ start:
 	@echo "$(GREEN)Installing dependencies...$(NC)"
 	@pnpm install
 	@echo "$(GREEN)Starting all services with Docker Compose...$(NC)"
-	@docker compose up -d
+	@docker compose up -d --build
 	@echo "$(BLUE)Waiting for database to be ready...$(NC)"
 	@sleep 5
 	@cd $(BACKEND_DIR) && cp .env.example .env 2>/dev/null || true
