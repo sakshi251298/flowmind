@@ -108,9 +108,9 @@ const repoBaseUrl = 'https://github.com/sakshi251298/flowmind';
 
 const docsLinks = [
   { label: 'GitHub Repo', href: repoBaseUrl },
-  { label: 'Getting Started', href: '/docs/#/getting-started.md' },
-  { label: 'Agentic Harness', href: '/docs/#/agent-harness.md' },
-  { label: 'Architecture', href: '/docs/#/architecture.md' },
+  { label: 'Getting Started', href: '/flowmind/docs/#/getting-started.md' },
+  { label: 'Agentic Harness', href: '/flowmind/docs/#/agent-harness.md' },
+  { label: 'Architecture', href: '/flowmind/docs/#/architecture.md' },
 ];
 
 type WalkthroughSlide = {
@@ -318,7 +318,7 @@ function App() {
               <a href="#features" className="nav-link">
                 Features
               </a>
-              <a href="/docs" className="nav-link">
+              <a href="/flowmind/docs" className="nav-link">
                 Docs
               </a>
             </nav>
@@ -723,7 +723,7 @@ function App() {
                     </a>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="rounded-full px-6">
-                    <a href="/docs/#/getting-started.md" target="_blank" rel="noreferrer">
+                    <a href="/flowmind/docs/#/getting-started.md" target="_blank" rel="noreferrer">
                       Read the setup guide
                     </a>
                   </Button>
@@ -751,13 +751,13 @@ function App() {
 
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                 <Button asChild className="group/btn1 rounded-2xl px-7 py-6 text-base shadow-lg shadow-primary/10 transition-transform hover:scale-[1.02] active:scale-[0.98]">
-                  <a href="/docs/#/agent-harness.md" target="_blank" rel="noreferrer">
+                  <a href="/flowmind/docs/#/agent-harness.md" target="_blank" rel="noreferrer">
                     Agentic Harness
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn1:translate-x-1" />
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="group/btn2 rounded-2xl px-7 py-6 text-base border-border/60 bg-transparent backdrop-blur-sm transition-all hover:bg-card hover:border-primary/30">
-                  <a href="/docs/#/README?id=tech-stack" target="_blank" rel="noreferrer">
+                  <a href="/flowmind/docs/#/README?id=tech-stack" target="_blank" rel="noreferrer">
                     Full Tech Stack
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn2:translate-x-1" />
                   </a>

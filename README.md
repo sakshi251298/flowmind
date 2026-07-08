@@ -5,7 +5,7 @@
 </p>
 
 <p align="center"><strong>Ask, Learn, Master.</strong></p>
-<p align="center">https://flowmind.sakshipatel.dev</p>
+<p align="center">http://www.sakshipatel.dev/flowmind/</p>
 <p align="center">Your personal AI learning ecosystem. An open-source, multi-agent platform that autonomously crafts highly personalized learning content to help you master any subject.</p>
 
 <p align="center">
