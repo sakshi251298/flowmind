@@ -105,6 +105,7 @@ const setupSteps = [
 ];
 
 const repoBaseUrl = 'https://github.com/sakshi251298/flowmind';
+const BASE = import.meta.env.BASE_URL; // '/flowmind/' in prod, '/' in dev
 
 const docsLinks = [
   { label: 'GitHub Repo', href: repoBaseUrl },
@@ -127,70 +128,70 @@ const walkthroughSlides: WalkthroughSlide[] = [
     title: 'Dashboard for sessions and learning flow',
     eyebrow: 'Product walkthrough',
     body: 'The dashboard brings new prompts, previous sessions, and learning momentum together in one place.',
-    media: '/product_assets/dashboard.gif',
+    media: `${BASE}product_assets/dashboard.gif`,
   },
   {
     id: 'chat',
     title: 'Chat with interactive elements',
     eyebrow: 'Product walkthrough',
     body: 'The chat experience keeps tutoring, follow-up questions, and interactive artifacts together in one continuous learning flow.',
-    media: '/product_assets/interactive.gif',
+    media: `${BASE}product_assets/interactive.gif`,
   },
   {
     id: 'deep-dives',
     title: 'Deep-dive reading built from the session',
     eyebrow: 'Product walkthrough',
     body: 'FlowMind can turn a live tutoring session into a structured long-form explanation that is clear enough to read now and useful enough to revisit later.',
-    media: '/product_assets/deep-dives.gif',
+    media: `${BASE}product_assets/deep-dives.gif`,
   },
   {
     id: 'podcast',
     title: 'Podcast-style revision on demand',
     eyebrow: 'Product walkthrough',
     body: 'Podcast-style recaps make it easy to revisit ideas away from the screen, turning downtime into useful revision time.',
-    media: '/product_assets/podcast.gif'
+    media: `${BASE}product_assets/podcast.gif`
   },
   {
     id: 'roadmap',
     title: 'Roadmaps that show concept relationships',
     eyebrow: 'Product walkthrough',
     body: 'Roadmaps reveal how concepts relate, what foundations come first, and where the next branch of the subject begins.',
-    media: '/product_assets/roadmap.gif'
+    media: `${BASE}product_assets/roadmap.gif`
   },
   {
     id: 'slides',
     title: 'Slides that summarize the topic arc',
     eyebrow: 'Product walkthrough',
     body: 'Slides compress the lesson into a concise narrative, making review faster and making it easier to explain the subject to someone else.',
-    media: '/product_assets/presentation.gif'
+    media: `${BASE}product_assets/presentation.gif`
   },
   {
     id: 'flashcards',
     title: 'Flashcards for active recall',
     eyebrow: 'Product walkthrough',
     body: 'Flashcards generated from the same topic help learners shift from passive reading to active recall when it is time to reinforce the material.',
-    media: '/product_assets/flashcard.gif'
+    media: `${BASE}product_assets/flashcard.gif`
   },
   {
     id: 'details',
     title: 'Details tab with spec and sources',
     eyebrow: 'Product walkthrough',
     body: 'The details view gives learners access to supporting structure, source references, and the context behind each generated output.',
-    media: '/product_assets/details.gif'
+    media: `${BASE}product_assets/details.gif`
   },
   {
     id: 'model-switcher',
     title: 'Model selection and settings modal',
     eyebrow: 'Product walkthrough',
     body: 'Model settings let learners tune the AI experience without breaking focus or leaving the flow of study.',
-    media: '/product_assets/model_selector.gif'
+    media: `${BASE}product_assets/model_selector.gif`
   },
   {
     id: 'dark-mode',
     title: 'Dark mode for late-night study',
     eyebrow: 'Product walkthrough',
     body: 'Dark mode gives learners a calmer visual setting for long reading sessions, focused review, and lower-light environments.',
-    media: '/product_assets/darkmode.gif'
+    media: `${BASE}product_assets/darkmode.gif`
   },
 ] as const;
 
@@ -300,7 +301,7 @@ function App() {
         <div className="mx-auto flex max-w-360 items-center justify-between px-5 py-4 sm:px-8">
           <a href="#home" className="flex items-center gap-3">
             <div className="brand-mark">
-              <img src="/Atom.svg" alt="FlowMind logo" className="h-full w-full" />
+              <img src={`${BASE}Atom.svg`} alt="FlowMind logo" className="h-full w-full" />
             </div>
             <div>
               <p className="font-heading text-xl tracking-tight">FlowMind</p>
@@ -403,7 +404,7 @@ function App() {
                     playsInline
                     className="h-full w-full object-cover sm:object-fill opacity-90 transition-opacity duration-700 group-hover:opacity-100"
                   >
-                    <source src="/product_assets/platform_demo.mp4" type="video/mp4" />
+                    <source src={`${BASE}product_assets/platform_demo.mp4`} type="video/mp4" />
                   </video>
 
                   {/* Custom Controls Overlay */}
@@ -424,7 +425,7 @@ function App() {
                     <MessageSquareMore className="h-4 w-4" /> Live Tutor
                   </div>
                   <div className="space-y-4">
-                    <img src="/product_assets/interactive_image2.png" alt="Live tutor" className="w-full h-full object-cover border border-border/60 rounded-[1rem]" />
+                    <img src={`${BASE}product_assets/interactive_image2.png`} alt="Live tutor" className="w-full h-full object-cover border border-border/60 rounded-[1rem]" />
                     {/* <div className="ml-auto w-10/12 rounded-[1.25rem] rounded-tr-sm bg-primary p-3.5 text-sm leading-6 text-primary-foreground shadow-md">
                       Explain event-driven architecture like I am learning it from scratch.
                     </div>
@@ -808,7 +809,7 @@ function App() {
               controls
               className="w-full h-full object-contain"
             >
-              <source src="/product_assets/platform_demo.mp4" type="video/mp4" />
+              <source src={`${BASE}product_assets/platform_demo.mp4`} type="video/mp4" />
             </video>
           </div>
         </div>
@@ -861,7 +862,7 @@ function FeaturePreview({
     return (
       <div className="preview-surface">
         <div className="embed-placeholder">
-          <img src="/product_assets/interactive_image.png" alt="Interactive explanation" className="w-full h-full max-w-90 object-cover border border-border/60 rounded-[1rem]" />
+          <img src={`${BASE}product_assets/interactive_image.png`} alt="Interactive explanation" className="w-full h-full max-w-90 object-cover border border-border/60 rounded-[1rem]" />
           <p className="mt-2 text-base font-medium text-foreground/90">Visual explanations inside the lesson</p>
           <p className="max-w-md text-center text-sm leading-6 text-muted-foreground">
             Diagrams, widgets, and interactive visuals help learners understand difficult ideas
@@ -876,7 +877,7 @@ function FeaturePreview({
     return (
       <div className="preview-surface">
         <div className="embed-placeholder embed-placeholder-roadmap">
-          <img src="/product_assets/roadmap_image.png" alt="Interactive explanation" className="w-full h-full object-cover border border-border/60 max-w-90 rounded-[1rem]" />
+          <img src={`${BASE}product_assets/roadmap_image.png`} alt="Interactive explanation" className="w-full h-full object-cover border border-border/60 max-w-90 rounded-[1rem]" />
           <p className="mt-2 text-base font-medium text-foreground/90">Roadmaps that make the path visible</p>
           <p className="max-w-md text-center text-sm leading-6 text-muted-foreground">
             See how concepts relate, what needs to come first, and where the next branch of the
