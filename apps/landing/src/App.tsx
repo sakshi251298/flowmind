@@ -403,7 +403,7 @@ function App() {
                     playsInline
                     className="h-full w-full object-cover sm:object-fill opacity-90 transition-opacity duration-700 group-hover:opacity-100"
                   >
-                    <source src="/product_assets/platform_demo_5x.mp4" type="video/mp4" />
+                    <source src="/product_assets/platform_demo.mp4" type="video/mp4" />
                   </video>
 
                   {/* Custom Controls Overlay */}
@@ -472,7 +472,7 @@ function App() {
 
 
 
-        <section id="walkthrough" className="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:pb-30 lg:pt-40">
+        <section id="walkthrough" className="mx-auto max-w-360 px-5 py-20 sm:px-8 lg:pb-30 lg:pt-40 hidden">
           <div className="grid gap-18 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
             <div className="space-y-4 pt-12">
               <p className="eyebrow">{activeSlide.eyebrow}</p>
@@ -808,7 +808,7 @@ function App() {
               controls
               className="w-full h-full object-contain"
             >
-              <source src="/product_assets/platform_demo_5x.mp4" type="video/mp4" />
+              <source src="/product_assets/platform_demo.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
